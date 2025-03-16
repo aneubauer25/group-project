@@ -97,4 +97,39 @@ std_nPFER = std(data_Control.n_PFER);
 mean_nPFTR = mean(data_Control.n_PFTR);
 std_nPFTR = std(data_Control.n_PFTR);
 
+%creating a table for the eye fixation times%
 
+EyeFixationMetrics = {'Disgust - PFMR'; 'Disgust - PFER'; 'Disgust - PFTR';
+    'Fear - PFMR'; 'Fear - PFER'; 'Fear - PFTR';
+    'Happy - PFMR'; 'Happy - PFER'; 'Happy - PFTR';
+    'Angry - PFMR'; 'Angry - PFER'; 'Angry - PFTR';
+    'Sad - PFMR'; 'Sad - PFER'; 'Sad - PFTR';
+    'Neutral - PFMR'; 'Neutral - PFER'; 'Neutral - PFTR'};
+
+%attempting new command, sprintf%
+
+ControlFixation = {sprintf('%.2f ± %.2f', mean_dPFMR, std_dPFMR);
+    sprintf('%.2f ± %.2f', mean_dPFER, std_dPFER);
+    sprintf('%.2f ± %.2f', mean_dPFTR, std_dPFTR);
+    sprintf('%.2f ± %.2f', mean_fPFMR, std_fPFMR);
+    sprintf('%.2f ± %.2f', mean_fPFER, std_fPFER);
+    sprintf('%.2f ± %.2f', mean_fPFTR, std_fPFTR);
+    sprintf('%.2f ± %.2f', mean_hPFMR, std_hPFMR);
+    sprintf('%.2f ± %.2f', mean_hPFER, std_hPFER);
+    sprintf('%.2f ± %.2f', mean_hPFTR, std_hPFTR);
+    sprintf('%.2f ± %.2f', mean_aPFMR, std_aPFMR);
+    sprintf('%.2f ± %.2f', mean_aPFER, std_aPFER);
+    sprintf('%.2f ± %.2f', mean_aPFTR, std_aPFTR);
+    sprintf('%.2f ± %.2f', mean_sPFMR, std_sPFMR);
+    sprintf('%.2f ± %.2f', mean_sPFER, std_sPFER);
+    sprintf('%.2f ± %.2f', mean_sPFTR, std_sPFTR);
+    sprintf('%.2f ± %.2f', mean_nPFMR, std_nPFMR);
+    sprintf('%.2f ± %.2f', mean_nPFER, std_nPFER);
+    sprintf('%.2f ± %.2f', mean_nPFTR, std_nPFTR)};
+
+%Creating the table%
+
+EyeFixationTable = table(EyeFixationMetrics, ControlFixation, ...
+    'VariableNames', {'Eye Fixation Parameter', 'Control Group Fixation Time (Mean ± SEM'});
+
+disp(EyeFixationTable);
