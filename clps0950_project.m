@@ -47,3 +47,54 @@ SummaryTable = table(Categories, Control, ...
                      'VariableNames', {'Parameter', 'Control'});
 disp(SummaryTable)
 
+%%Calculating the means + SEM for all fixation times%%
+
+%disgust%
+mean_dPFMR = mean(data_Control.d_PFMR);
+std_dPFMR = std(data_Control.d_PFMR);
+mean_dPFER = mean(data_Control.d_PFER);
+std_dPFER = std(data_Control.d_PFER);
+mean_dPFTR = mean(data_Control.d_PFTR);
+std_dPFTR = std(data_Control.d_PFTR);
+
+%fear%
+mean_fPFMR = mean(data_Control.f_PFMR);
+std_fPFMR = std(data_Control.f_PFMR);
+mean_fPFER = mean(data_Control.f_PFER);
+std_fPFER = std(data_Control.f_PFER);
+mean_fPFTR = mean(data_Control.f_PFTR);
+std_fPFTR = std(data_Control.f_PFTR);
+
+%happy%
+mean_hPFMR = mean(data_Control.h_PFMR);
+std_hPFMR = std(data_Control.h_PFMR);
+mean_hPFER = mean(data_Control.h_PFER);
+std_hPFER = std(data_Control.h_PFER);
+mean_hPFTR = mean(data_Control.h_PFTR);
+std_hPFTR = std(data_Control.h_PFTR);
+
+%angry%
+mean_aPFMR = mean(data_Control.a_PFMR);
+std_aPFMR = std(data_Control.a_PFMR);
+mean_aPFER = mean(data_Control.a_PFER);
+std_aPFER = std(data_Control.a_PFER);
+mean_aPFTR = mean(data_Control.a_PFTR);
+std_aPFTR = std(data_Control.a_PFTR);
+
+%sad%
+mean_sPFMR = mean(data_Control.s_PFMR);
+std_sPFMR = std(data_Control.s_PFMR);
+mean_sPFER = mean(data_Control.s_PFER);
+std_sPFER = std(data_Control.s_PFER);
+mean_sPFTR = mean(data_Control.s_PFTR);
+std_sPFTR = std(data_Control.s_PFTR);
+
+%neutral%
+mean_nPFMR = mean(data_Control.n_PFMR);
+std_nPFMR = std(data_Control.n_PFMR);
+mean_nPFER = mean(data_Control.n_PFER);
+std_nPFER = std(data_Control.n_PFER);
+mean_nPFTR = mean(data_Control.n_PFTR);
+std_nPFTR = std(data_Control.n_PFTR);
+
+
