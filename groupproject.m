@@ -21,13 +21,14 @@ means_adhdsym = varfun(@mean, data, 'InputVariables', {'tur', 'oppositional', 'i
 
 std_adhdsym = varfun(@std, data, 'InputVariables', {'tur', 'oppositional', 'inattentive', 'hyperactive', 'ADHDIndex'});
 
- combinedtable = [means_corr, std_corr];
-combinedcorr = [means_corr, std_corr];
-combinedeyeandmouth = [means_eyeandmouth, std_eyeandmouth];
-combinedtotals = [means_totals, std_totals];
 
-combined_adhdsym = [means_adhdsym, std_adhdsym];
+combinedcorr = [means_corr, std_corr]
+combinedToR = [means_ToM, std_ToM]
+combinedeyeandmouth = [means_eyeandmouth, std_eyeandmouth]
+combinedtotals = [means_totals, std_totals]
+combined_adhdsym = [means_adhdsym, std_adhdsym]
 
 
 
-test
+
+
