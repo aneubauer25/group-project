@@ -130,6 +130,6 @@ ControlFixation = {sprintf('%.2f ± %.2f', mean_dPFMR, std_dPFMR);
 %Creating the table%
 
 EyeFixationTable = table(EyeFixationMetrics, ControlFixation, ...
-    'VariableNames', {'Eye Fixation Parameter', 'Control Group Fixation Time (Mean ± SEM'});
+    'VariableNames', {'Eye Fixation Parameter', 'Control Group Fixation Time (Mean ± SD)'});
 
 disp(EyeFixationTable);
