@@ -22,13 +22,13 @@ means_adhdsym = varfun(@mean, data, 'InputVariables', {'tur', 'oppositional', 'i
 std_adhdsym = varfun(@std, data, 'InputVariables', {'tur', 'oppositional', 'inattentive', 'hyperactive', 'ADHDIndex'});
 
 
-combinedcorr = [means_corr, std_corr];
-combinedToR = [means_ToM, std_ToM];
-combinedeyeandmouth = [means_eyeandmouth, std_eyeandmouth];
-combinedtotals = [means_totals, std_totals];
-combined_adhdsym = [means_adhdsym, std_adhdsym];
+combinedcorr = [means_corr, std_corr]
+combinedToR = [means_ToM, std_ToM]
+combinedeyeandmouth = [means_eyeandmouth, std_eyeandmouth]
+combinedtotals = [means_totals, std_totals]
+combined_adhdsym = [means_adhdsym, std_adhdsym]
 
-distributiontests = readtable('annette distribution tests.xlsx');
+distributiontests = readtable('annette distribution tests.xlsx')
 
 test1 = distributiontests(:,"oppositional");
 test2 = distributiontests(:,"inattentive");
@@ -40,21 +40,16 @@ test7 = distributiontests(:,"A_PFMR_H");
 test8 = distributiontests(:,"A_PFER_H");
 test9 = distributiontests(:, "d_PFMR");
 test10 = distributiontests(:, "d_PFER");
-test11 = distributiontests(:, "f_PFMR");
-test12 = distributiontests(:, "f_PFER");
-test13 = distributiontests(:,"h_PFMR");
-test14 = distributiontests(:,"h_PFER");
-test15 = distributiontests(:,"dcorr_A");
-test16 = distributiontests(:,"fcorr_A");
-test17 = distributiontests(:,"hcorr_A");
-test18 = distributiontests(:,"dcorr");
-test19 = distributiontests(:,"fcorr");
-test20 = distributiontests(:,"hcorr");
-
-x = test20.hcorr;
-h = kstest(x)
-
-
+test11 = distributiontests(:, "f_PFMR")
+test12 = distributiontests(:, "f_PFER")
+test13 = distributiontests(:,"h_PFMR")
+test14 = distributiontests(:,"h_PFER")
+test15 = distributiontests(:,"dcorr_A")
+test16 = distributiontests(:,"fcorr_A")
+test17 = distributiontests(:,"hcorr_A")
+test18 = distributiontests(:,"dcorr")
+test19 = distributiontests(:,"fcorr")
+test20 = distributiontests(:,"hcorr")
 
 
 
